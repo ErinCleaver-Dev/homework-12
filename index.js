@@ -1,6 +1,11 @@
-// Import stylesheets
-import './style.css';
 
-// Write Javascript code!
-const appDiv = document.getElementById('app');
-appDiv.innerHTML = `<h1>JS Starter</h1>`;
+
+const printChar = (char, start, rows) => {
+  if(start > rows) {
+    return "";
+  }
+
+  console.log(char * start)
+  return printChar(char, start + 1, rows)
+}
+
